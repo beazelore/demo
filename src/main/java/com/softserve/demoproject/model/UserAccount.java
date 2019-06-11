@@ -26,5 +26,6 @@ public class UserAccount {
     @JsonManagedReference
     private Set<PhoneNumber> phones;
     @OneToMany(mappedBy = "user")
+    @JsonManagedReference
     private Set<Call> calls;
 }

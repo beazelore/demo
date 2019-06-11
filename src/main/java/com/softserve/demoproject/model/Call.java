@@ -1,5 +1,6 @@
 package com.softserve.demoproject.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ public class Call {
     private long id;
     @ManyToOne
     @JoinColumn(name="client_id", nullable = false)
+    @JsonBackReference
     private UserAccount user;
     private String callerPhoneNumber;
     private String recipientPhoneNumber;
