@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
@@ -21,7 +22,9 @@ public class Call {
     @JoinColumn(name="client_id", nullable = false)
     @JsonBackReference
     private UserAccount user;
+    @NotNull
     private String callerPhoneNumber;
+    @NotNull
     private String recipientPhoneNumber;
     private LocalDateTime callTime;
     private int duration;

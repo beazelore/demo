@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Data
@@ -17,6 +18,7 @@ public class PhoneNumber {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
+    @NotNull
     private String phoneNumber;
     @ManyToOne(cascade= {CascadeType.MERGE})
     @JoinColumn(name="user_account")

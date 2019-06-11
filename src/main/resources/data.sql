@@ -1,10 +1,10 @@
-INSERT INTO user_account values (1,'2000-11-11','Eleazar Lueilwitz','Male'),
-                                (2,'2000-11-11','Mrs. Chet Bechtelar','Female'),
-                                (3,'2000-11-11','Clifton Schmidt','Male'),
-                                (4,'2000-11-11','Albina Schmitt V','Female'),
-                                (5,'2000-11-11','Katrina Jakubowski','Female'),
-                                (6,'2000-11-11','Yazmin Nikolaus','Male'),
-                                (7,'2000-11-11','Reuben Kerluke','Male');
+INSERT INTO user_account values (1,'2000-11-11','Eleazar Lueilwitz','1'),
+                                (2,'2000-11-11','Mrs. Chet Bechtelar','2'),
+                                (3,'2000-11-11','Clifton Schmidt','1'),
+                                (4,'2000-11-11','Albina Schmitt V','2'),
+                                (5,'2000-11-11','Katrina Jakubowski','2'),
+                                (6,'2000-11-11','Yazmin Nikolaus','1'),
+                                (7,'2000-11-11','Reuben Kerluke','1');
 
 
 INSERT INTO phone_number values (1,'12235-356',1),

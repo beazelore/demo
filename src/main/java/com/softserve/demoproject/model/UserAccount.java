@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -19,8 +20,10 @@ public class UserAccount {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
+    @NotNull
     private String fullName;
     private LocalDate dateOfBirth;
+    @Pattern(regexp = "[0129]", message = "0 = not known, 1 = male, 2 = female, 9 = not applicable")
     private String gender;
     @OneToMany(mappedBy = "ownedBy", cascade = CascadeType.PERSIST)
     @JsonManagedReference
