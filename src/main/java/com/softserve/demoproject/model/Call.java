@@ -5,7 +5,6 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Entity
@@ -23,6 +22,6 @@ public class Call {
     private String callerPhoneNumber;
     private String recipientPhoneNumber;
     private LocalDateTime callTime;
-    private Timestamp duration;
+    private int duration;
     private String city;
 }
