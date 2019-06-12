@@ -1,10 +1,8 @@
-package com.softserve.demoproject.controller;
+package com.example.demoproject.controller;
 
-import com.softserve.demoproject.model.UserAccount;
-import com.softserve.demoproject.service.UserAccountService;
+import com.example.demoproject.model.UserAccount;
+import com.example.demoproject.service.UserAccountService;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/user")

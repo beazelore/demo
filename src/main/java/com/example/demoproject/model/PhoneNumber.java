@@ -1,4 +1,4 @@
-package com.softserve.demoproject.model;
+package com.example.demoproject.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;

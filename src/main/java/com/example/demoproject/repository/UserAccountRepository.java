@@ -1,6 +1,6 @@
-package com.softserve.demoproject.repository;
+package com.example.demoproject.repository;
 
-import com.softserve.demoproject.model.UserAccount;
+import com.example.demoproject.model.UserAccount;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

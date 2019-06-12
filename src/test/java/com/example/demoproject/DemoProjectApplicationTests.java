@@ -1,4 +1,4 @@
-package com.softserve.demoproject;
+package com.example.demoproject;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

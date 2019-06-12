@@ -1,6 +1,7 @@
-package com.softserve.demoproject.model;
+package com.example.demoproject.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "CallLogs")
 @EqualsAndHashCode(of = {"id", "callTime", "callerPhoneNumber"})
 public class Call {

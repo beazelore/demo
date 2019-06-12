@@ -1,4 +1,4 @@
-package com.softserve.demoproject.model;
+package com.example.demoproject.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,8 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -24,6 +25,7 @@ public class UserAccount {
     private String fullName;
     private LocalDate dateOfBirth;
     @Pattern(regexp = "[0129]", message = "0 = not known, 1 = male, 2 = female, 9 = not applicable")
+    @Column(columnDefinition = "CHAR(1)")
     private String gender;
     @OneToMany(mappedBy = "ownedBy", cascade = CascadeType.PERSIST)
     @JsonManagedReference

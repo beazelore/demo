@@ -1,16 +1,18 @@
-package com.softserve.demoproject.service;
+package com.example.demoproject.service;
 
-import com.softserve.demoproject.model.PhoneNumber;
-import com.softserve.demoproject.model.UserAccount;
-import com.softserve.demoproject.repository.UserAccountRepository;
+import com.example.demoproject.model.PhoneNumber;
+import com.example.demoproject.model.UserAccount;
+import com.example.demoproject.repository.UserAccountRepository;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
+@NoArgsConstructor
 public class UserAccountService {
     private UserAccountRepository userAccountRepository;
 
+    @Autowired
     public UserAccountService(UserAccountRepository userAccountRepository){
         this.userAccountRepository = userAccountRepository;
     }
@@ -19,9 +21,5 @@ public class UserAccountService {
             p.setOwnedBy(userAccount);
         }
         return userAccountRepository.save(userAccount);
-    }
-
-    public List<UserAccount> getAll() {
-        return userAccountRepository.findAll();
     }
 }

@@ -1,20 +1,23 @@
-package com.softserve.demoproject.service;
+package com.example.demoproject.service;
 
-import com.softserve.demoproject.model.Call;
-import com.softserve.demoproject.projection.CallStatistics;
-import com.softserve.demoproject.repository.CallRepository;
+import com.example.demoproject.projection.CallStatistics;
+import com.example.demoproject.model.Call;
+import com.example.demoproject.repository.CallRepository;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
+@NoArgsConstructor
 public class CallService {
     private CallRepository callRepository;
+    @Autowired
     public CallService(CallRepository callRepository){
         this.callRepository = callRepository;
     }
-    public Iterable<CallStatistics> countByCity(){
+    public List<CallStatistics> countByCity(){
         return callRepository.countByCity();
     }
 

@@ -1,8 +1,8 @@
-package com.softserve.demoproject.controller;
+package com.example.demoproject.controller;
 
-import com.softserve.demoproject.model.Call;
-import com.softserve.demoproject.projection.CallStatistics;
-import com.softserve.demoproject.service.CallService;
+import com.example.demoproject.projection.CallStatistics;
+import com.example.demoproject.model.Call;
+import com.example.demoproject.service.CallService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +16,7 @@ public class CallController {
     }
 
     @GetMapping("/numberByCity")
-    public Iterable<CallStatistics> countByCity(){
+    public List<CallStatistics> countByCity(){
         return callService.countByCity();
     }
 
