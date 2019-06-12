@@ -35,7 +35,7 @@ public class UserAccountRepositoryTest {
     public void shouldSaveValidAccount(){
         UserAccount saved = userAccountRepository.save(validAccount);
 
-        assertEquals(saved,validAccount);
+        assertEquals(validAccount,saved);
     }
 
     @Test(expected = javax.validation.ConstraintViolationException.class)

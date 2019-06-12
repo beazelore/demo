@@ -15,7 +15,7 @@ public interface CallRepository extends CrudRepository<Call, Long> {
     List<CallStatistics> countByCity();
 
     @Query(nativeQuery = true,
-            value = "SELECT * FROM call_logs where (client_id,duration) = (select cl.client_id,  max(cl.duration) from call_logs as cl " +
+            value = "SELECT DISTINCT * FROM call_logs where (client_id,duration) = (select cl.client_id,  max(cl.duration) from call_logs as cl " +
                     "where call_time between :startDate and :endDate and cl.client_id=:clientId group by cl.client_id)")
     List<Call> getLongestCall(@Param("clientId") Long clientId, @Param("startDate")String startDate,
                               @Param("endDate") String endDate);

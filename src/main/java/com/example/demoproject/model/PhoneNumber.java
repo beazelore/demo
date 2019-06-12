@@ -13,13 +13,13 @@ import javax.validation.constraints.NotNull;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = {"id", "phoneNumber"})
+@EqualsAndHashCode(of = {"id", "phone"})
 public class PhoneNumber {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
     @NotNull
-    private String phoneNumber;
+    private String phone;
     @ManyToOne(cascade= {CascadeType.MERGE})
     @JoinColumn(name="user_account")
     @JsonBackReference

@@ -50,7 +50,7 @@ public class UserAccountServiceTest {
     public void saveAccountTest(){
         UserAccount result = userAccountRepository.save(userAccount);
 
-        assertEquals(result, userAccount);
+        assertEquals(userAccount, result);
         assertTrue(result.getPhones().contains(phone));
 
     }

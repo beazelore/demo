@@ -59,7 +59,7 @@ public class CallRepositoryIntegrationTest {
     public void getCountByCity(){
         List<CallStatistics> statistics = callRepository.countByCity();
         assertTrue(!statistics.isEmpty());
-        assertEquals(statistics.get(0).getCity(), callOne.getCity());
-        assertEquals(statistics.get(0).getCount(),2);
+        assertEquals(callOne.getCity(), statistics.get(0).getCity());
+        assertEquals(2,statistics.get(0).getCount());
     }
 }

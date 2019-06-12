@@ -54,9 +54,9 @@ public class CallServiceTest {
         verify(callRepository, atLeastOnce()).getLongestCall(anyLong(),anyString(),anyString());
 
         assertFalse(result.isEmpty());
-        assertEquals(result.get(0).getId(), 1L);
-        assertEquals(result.get(0).getCallTime(), date);
-        assertEquals(result.get(0).getCity(), "Kyiv");
+        assertEquals(1L, result.get(0).getId());
+        assertEquals(date, result.get(0).getCallTime());
+        assertEquals("Kyiv", result.get(0).getCity());
     }
 
     @Test
